@@ -31,3 +31,20 @@ function reverseStr(str){
   console.log(result); 
 
 ```
+
+### 2.Given a string without spaces, the task is to remove duplicates from it.
+```<language identifier>
+function removeDuplicates(str){
+   arrStr = str.split("");
+   var arr = [];
+   for(let i = 0; i <= arrStr.length;i++){
+     if(!arr.includes(arrStr[i])){
+       arr.push(arrStr[i])
+     }
+   }
+      return arr.join("");
+ }
+ 
+ const result = removeDuplicates("zvvaao");
+ console.log(result); 
+```
