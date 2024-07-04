@@ -48,3 +48,25 @@ function removeDuplicates(str){
  const result = removeDuplicates("zvvaao");
  console.log(result); 
 ```
+
+### 2.const obj = {test :"anirudh", test2 :{test3 :"rahul", test4 :{text5 :"alex"}}}
+ output = ["anirudh", "rahul","alex"]
+
+```
+ const obj = {test :"anirudh", test2 :{test3 :"rahul", test4 :{text5 :"alex"}}}
+ output = ["anirudh", "rahul","alex"]
+   let stack = []; 
+ function objFunction(obj){
+    for(let val in obj){
+      if(typeof obj[val] ==='object'){
+        objFunction(obj[val])
+      }else{
+       stack.push(obj[val])
+      }
+    }
+     return stack
+ }
+ 
+  const result= objFunction(obj);
+  console.log(result);
+```
