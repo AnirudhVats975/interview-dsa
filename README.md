@@ -49,7 +49,7 @@ function removeDuplicates(str){
  console.log(result); 
 ```
 
-### 2.const obj = {test :"anirudh", test2 :{test3 :"rahul", test4 :{text5 :"alex"}}}
+### 3.const obj = {test :"anirudh", test2 :{test3 :"rahul", test4 :{text5 :"alex"}}}
  output = ["anirudh", "rahul","alex"]
 
 ```
@@ -70,3 +70,10 @@ function removeDuplicates(str){
   const result= objFunction(obj);
   console.log(result);
 ```
+
+### 4.Cumulative Sum
+Arr:    [1, 2, 3, 4]
+result: [1, 3, 6, 10]
+
+
+
