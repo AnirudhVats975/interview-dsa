@@ -76,4 +76,20 @@ Arr:    [1, 2, 3, 4]
 result: [1, 3, 6, 10]
 
 
+```
+ function cumulativeSum(arr){
+   let stack =[];
+   let sum = 0;
+  for(let i=0; i< arr.length;i++){
+     sum += arr[i]
+     stack.push(sum)
+  } 
+  return stack;
+ }
+
+const result  = cumulativeSum([1, 2, 3, 4])
+console.log(result);
+```
+
+
 
