@@ -92,4 +92,86 @@ console.log(result);
 ```
 
 
+### 5.JavaScript Program to Check an Array is Sorted or Not
+
+```
+function isArrSorted(arr) {
+ for(let i= 0; i < arr.length; i++){
+    if(arr[i] > arr[i + 1]){
+    return false
+    }
+ }
+   return true
+}
+
+const result = isArrSorted([1,2,3,7, 1])
+console.log(result);
+```
+
+### 6.Javascript Program to Move all zeroes to end of array
+Input :  arr[] = {1, 2, 0, 4, 3, 0, 5, 0};
+Output : arr[] = {1, 2, 4, 3, 5, 0, 0}
+
+```
+function movezeroAtEnd(arr) {
+  let zeroArr =[];
+  for(let i = 0; i < arr.length; i++ ){
+   if(arr[i] === 0){
+    zeroArr.push(arr[i])
+   }
+  }
+  let filterArr = arr.filter(item => item !== 0);
+  return filterArr.concat(zeroArr);
+}
+
+const result = movezeroAtEnd([1, 2, 0, 4, 3, 0, 5, 0])
+console.log(result);
+```
+
+```
+function movezeroAtEnd(arr) {
+  let zeroArr =[];
+  let zeroCount =0;
+  for(let i = 0; i < arr.length; i++ ){
+   if(arr[i] === 0){
+    zeroCount++;
+   }else {
+    zeroArr.push(arr[i])
+   }
+  }
+  
+  while(zeroCount > 0){
+    zeroArr.push(0);
+    zeroCount--
+  }
+   return zeroArr;
+}
+
+const result = movezeroAtEnd([1, 2, 0, 4, 3, 0, 5, 0])
+console.log(result);
+```
+
+### 7.Map and their Polyfills
+const employees = [
+    { name: 'John', age: 32 },
+    { name: 'Sarah', age: 28 },
+    { name: 'Michael', age: 40 },
+];
+
+ const employessName = employees.map((item)=>{
+  return item.name;
+})
+console.log(employessName);
+
+
+```
+//Polyfills
+
+
+
+```
+
+
+
+
 
