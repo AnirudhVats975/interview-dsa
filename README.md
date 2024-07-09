@@ -171,6 +171,26 @@ console.log(employessName);
 
 ```
 
+### 6.How to count string occurrence in string (hashmap).
+
+```
+function count(str) {
+  const strArr = str.split(" ");
+  let wordcount ={}
+  for(let i =0; i < strArr.length; i++){
+    let word = strArr[i];
+    if(wordcount[word]){
+       wordcount[word]++;
+    }else {
+      wordcount[word] = 1
+    }  
+  }
+   return wordcount;
+}
+
+const result = count("hi hllo hlo anirudh anirudh ji hi ji hi");
+console.log(result);
+```
 
 
 
