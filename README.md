@@ -193,5 +193,27 @@ console.log(result);
 ```
 
 
+### 7.Merge Two Sorted Arrays and  remove the dublicate value.
+A: [1, 2, 3, 4, 4]
+B: [2, 4, 5, 5]
+C: [1, 2, 2, 3, 4, 4, 4, 5, 5]
+
+```
+
+ function sortArr(arr1, arr2){
+   const margeArr =  [...arr1, ...arr2];
+    const newArr =[];
+     for(let i= 0; i < margeArr.length; i++){
+       if(!newArr.includes(margeArr[i])){
+         newArr.push(margeArr[i])
+       }
+     }
+      return newArr;
+ }
+ const result = sortArr([1,2,3,4,5,5,6], [3,4,4,5,6,7,7,7]);
+ console.log(result); 
+```
+
+
 
 
