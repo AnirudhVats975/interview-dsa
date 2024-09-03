@@ -214,33 +214,8 @@ C: [1, 2, 2, 3, 4, 4, 4, 5, 5]
  console.log(result); 
 ```
 
-### 8. Move all zeros present in an array to the end.
 
-```
-function moveZerosToEnd(nums) {
-   let i = 0;
-   let j = 0;
-   const len = nums.length;
- 
-   while (i < len) {
-      if (nums[i] !== 0) {
-         [nums[i], nums[j]] = [nums[j], nums[i]];
-         j++;
-      }
-      i++;
-   }
- 
-   return nums;
-}
-  
-  
-  const arr = [6, 0, 8, 2, 3, 0, 4, 0, 1 ];
-  const result =  moveZerosToEnd(arr);
-  console.log(result) 
-```
-
-
-### 9. Find a pair with the given sum in an array.
+### 8. Find a pair with the given sum in an array.
 
 ```
 function sumofThePair(arr, target) {
@@ -259,6 +234,58 @@ const pairs = [];
   const arr = [6, 0, 8, 2, 3, 0, 4, 0, 1 ];
   const result =  sumofThePair(arr, 10);
   console.log(result) 
+```
+
+### 8. Sorting 
+
+### Bubble short
+
+```
+function bubbleSort(arr) {
+ for(let i= 0 ; i <arr.length; i++){
+    for(let j = 0; j < (arr.length - i -1); j++) {
+       if(arr[j] > arr[j+1]){
+         var temp = arr[j];
+         arr[j] = arr[j + 1]
+         arr [j+1] = temp;
+       }
+    }
+ }
+ return arr
+}
+  
+  
+  const arr = [6, 0, 8, 2, 3, 0, 4, 0, 1 ];
+  const result =  bubbleSort(arr);
+  console.log(result)
+
+```
+Optimized Solution
+
+```
+function bubbleSort(arr) {
+let isSwapped;
+ for(let i= 0 ; i <arr.length; i++){
+  isSwapped = false;
+    for(let j = 0; j < (arr.length - i -1); j++) {
+       if(arr[j] > arr[j+1]){
+         var temp = arr[j];
+         arr[j] = arr[j + 1]
+         arr [j+1] = temp;
+          isSwapped = true;
+       }
+    }
+  if (!isSwapped) 
+            break;
+ }
+ return arr
+}
+  
+  
+  const arr = [6, 0, 8, 2, 3, 0, 4, 0, 1 ];
+  const result =  bubbleSort(arr);
+  console.log(result) 
+
 ```
 
 
