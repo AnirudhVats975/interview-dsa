@@ -214,6 +214,55 @@ C: [1, 2, 2, 3, 4, 4, 4, 5, 5]
  console.log(result); 
 ```
 
+### 8. Move all zeros present in an array to the end.
+
+```
+function moveZerosToEnd(nums) {
+   let i = 0;
+   let j = 0;
+   const len = nums.length;
+ 
+   while (i < len) {
+      if (nums[i] !== 0) {
+         [nums[i], nums[j]] = [nums[j], nums[i]];
+         j++;
+      }
+      i++;
+   }
+ 
+   return nums;
+}
+  
+  
+  const arr = [6, 0, 8, 2, 3, 0, 4, 0, 1 ];
+  const result =  moveZerosToEnd(arr);
+  console.log(result) 
+```
+
+
+### 9. Find a pair with the given sum in an array.
+
+```
+function sumofThePair(arr, target) {
+const pairs = [];
+   for(let i= 0; i < arr.length; i++){
+    for(let j= i + 1; j < arr.length; j++){
+       if(arr[i] + arr[j] === target){
+          pairs.push([arr[i], arr[j]]);
+       }
+    }
+   }
+   return pairs.length ? pairs : null; 
+}
+  
+  
+  const arr = [6, 0, 8, 2, 3, 0, 4, 0, 1 ];
+  const result =  sumofThePair(arr, 10);
+  console.log(result) 
+```
+
+
+
 
 
 
