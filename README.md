@@ -289,6 +289,53 @@ let isSwapped;
 ```
 
 
+### 9.Can you write a function in JavaScript to remove duplicate elements from an array?
+
+```
+ function removeDublicalte(arr){
+   let temp =[];
+   for(let i =0; i < arr.length; i++){
+    if(!temp.includes(arr[i])){
+     temp.push(arr[i])
+    }
+   }
+   return temp;
+ }
+ 
+const result = removeDublicalte([1,2,3,4,5,4,3,2]);
+console.log(result);
+```
+
+### 10. Can you write a function in JavaScript to get the current date in the format “YYYY-MM-DD”?
+
+```
+ function currDate(){
+   return new Date().toISOString().split('T')[0];
+ }
+ 
+  const result = currDate();
+  console.log(result);
+```
+### 10. Can you write a function in JavaScript to split an array into chunks of a specified size?
+
+```
+ function chunkArray(arr, chunkSize){
+  
+  let result =[];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+     console.log(i + chunkSize)
+    result.push(arr.slice(i, i + chunkSize));
+  }
+   return result
+  
+ }
+
+const chunkedArray = chunkArray([1,2,3,4,5,6,7,6,5], 3);
+  console.log(chunkedArray);
+
+```
+
+
 
 
 
