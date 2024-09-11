@@ -151,7 +151,7 @@ const result = movezeroAtEnd([1, 2, 0, 4, 3, 0, 5, 0])
 console.log(result);
 ```
 
-### 7.Map and their Polyfills
+### 7. Map and their Polyfills
 const employees = [
     { name: 'John', age: 32 },
     { name: 'Sarah', age: 28 },
@@ -171,7 +171,7 @@ console.log(employessName);
 
 ```
 
-### 6.How to count string occurrence in string (hashmap).
+### 8. How to count string occurrence in string (hashmap).
 
 ```
 function count(str) {
@@ -193,7 +193,7 @@ console.log(result);
 ```
 
 
-### 7.Merge Two Sorted Arrays and  remove the dublicate value.
+### 9. Merge Two Sorted Arrays and  remove the dublicate value.
 A: [1, 2, 3, 4, 4]
 B: [2, 4, 5, 5]
 C: [1, 2, 2, 3, 4, 4, 4, 5, 5]
@@ -215,7 +215,7 @@ C: [1, 2, 2, 3, 4, 4, 4, 5, 5]
 ```
 
 
-### 8. Find a pair with the given sum in an array.
+### 10. Find a pair with the given sum in an array.
 
 ```
 function sumofThePair(arr, target) {
@@ -236,7 +236,7 @@ const pairs = [];
   console.log(result) 
 ```
 
-### 8. Sorting 
+### 11. Sorting 
 
 ### Bubble short
 
@@ -289,7 +289,7 @@ let isSwapped;
 ```
 
 
-### 9.Can you write a function in JavaScript to remove duplicate elements from an array?
+### 12. Can you write a function in JavaScript to remove duplicate elements from an array?
 
 ```
  function removeDublicalte(arr){
@@ -306,7 +306,7 @@ const result = removeDublicalte([1,2,3,4,5,4,3,2]);
 console.log(result);
 ```
 
-### 10. Can you write a function in JavaScript to get the current date in the format “YYYY-MM-DD”?
+### 13. Can you write a function in JavaScript to get the current date in the format “YYYY-MM-DD”?
 
 ```
  function currDate(){
@@ -316,7 +316,7 @@ console.log(result);
   const result = currDate();
   console.log(result);
 ```
-### 10. Can you write a function in JavaScript to split an array into chunks of a specified size?
+### 14. Can you write a function in JavaScript to split an array into chunks of a specified size?
 
 ```
  function chunkArray(arr, chunkSize){
@@ -334,7 +334,101 @@ const chunkedArray = chunkArray([1,2,3,4,5,6,7,6,5], 3);
   console.log(chunkedArray);
 
 ```
+### 15. Find a pair with the given sum in an array?
 
+```
+function sumOfTwo(arr, target) {
+  const pairs = []; 
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        pairs.push([arr[i], arr[j]]); 
+      }
+    }
+  }
+
+  return pairs; 
+}
+
+const result = sumOfTwo([8, 7, 2, 5, 3, 1], 10);
+console.log(result); 
+```
+
+### 16. multiplay the value of  array  with Recursion?
+
+```
+  function multiplayFun(arr) {
+    if(arr.length <= 0){
+    return 1
+    }else{
+     return arr[arr.length -1 ] *  multiplayFun(arr.slice(0, arr.length -1 )) 
+    }
+  }
+  const result = multiplayFun([1,2,3,4,5]);
+  console.log(result);
+```
+
+### 17. Factorial of a Number with Recursion?
+
+```
+ function Factorial(num){
+  if(num <= 0){
+  return 1;
+  }else{
+    return num * Factorial(num - 1);
+  }
+ }
+ 
+ const result = Factorial(0);
+ console.log(result)
+```
+
+### 18.Reverse a String  with Recursion?
+
+```
+ function ReverseString(str){
+    if(str.length <= 0){
+    return str
+    }else{
+    return ReverseString(str.slice(1)) + str[0];
+    }    
+   
+ }
+ const result = ReverseString("myname");
+ console.log(result);
+```
+
+### 19. Check Palindrome (Recursion)?
+
+```
+ function isPalindrome(str){
+    if(str.length <= 1){
+    return true
+    }
+    
+     if(str[0] !== str[str.length - 1]){
+       return  false
+     }    
+     return isPalindrome(str.slice(1, -1))   
+ }
+
+ const result = isPalindrome("madame");
+ console.log(result);
+```
+### 20.Count Vowels in a String ?
+
+```
+ function countVowels(str){
+  let vowels = ["a", "e", "i","o", "u"];
+  let strArr = str.toLowerCase().split("");
+ return strArr.filter(char => vowels.includes(char)).length;
+  
+ }
+
+ const result = countVowels("aaaaaaa");
+ console.log(result);
+```
 
 
 
