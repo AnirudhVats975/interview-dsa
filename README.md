@@ -430,6 +430,49 @@ console.log(result);
  console.log(result);
 ```
 
+### 21. Find the frequency of elements in array ?
+
+```
+
+ function frequenyWord(arr){
+  const temp = {};
+    arr.forEach((item)=>{
+     if(temp[item]){
+       temp[item]++
+     }else{
+     temp[item] = 1
+     }
+    })
+    
+   return temp
+ }
+
+ const result = frequenyWord(["laptop", "word", "sofa", "word"]);
+ console.log(result)
+```
+
+### 22.  Group items on the basis of age of given array of object?
+
+```
+ function groupByAge(data){
+   const check = {};
+   data.forEach((item)=>{
+    if(!check[item.age]){
+        check[item.age] = [item]
+    }else {
+        check[item.age].push(item)
+    }
+   })
+   return  check
+ }
+
+ const result = groupByAge([{name  :"anirudh", age  :25}, {name  :"abin", age :21}, {name : "rehan" , age : 25}]);
+ console.log(result)
+```
+
+### 23. 
+
+
 
 
 
