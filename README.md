@@ -470,7 +470,106 @@ console.log(result);
  console.log(result)
 ```
 
-### 23. 
+### 23. Simple Queue
+
+```
+class Queue {
+    constructor() {
+        this.items = [];
+    }
+
+    enqueue(element) {
+        this.items.push(element); 
+    }
+
+    dequeue() {
+        if (this.isEmpty()) {
+            return "Underflow, cannot perform dequeue";
+        }
+        return this.items.shift(); 
+    }
+
+    isEmpty() {
+        return this.items.length === 0; 
+    }
+
+    front() {
+        if (this.isEmpty()) {
+            return "No element in the queue";
+        }
+        return this.items[0]; 
+    }
+
+    size() {
+        return this.items.length; 
+    }
+
+    printQueue() { 
+        let queueString = "";
+        for (let i = 0; i < this.items.length; i++) {
+            queueString += this.items[i] + ", "; 
+        }
+        console.log("Queue:", queueString.slice(0, -2)); 
+    }
+}
+
+const myQueue = new Queue();
+myQueue.enqueue(5);
+myQueue.dequeue();
+myQueue.enqueue(10);
+myQueue.enqueue(20);
+console.log(myQueue.front());
+console.log(myQueue.size());
+myQueue.printQueue(); 
+
+```
+
+### 23. Circular Queue?
+
+```
+function myCircularQueue(k) {
+   this.queue = [];
+   this.size = k;
+}
+
+myCircularQueue.prototype.enqueue = function (value){
+if(this.size === this.queue.length) {
+return  false;
+}
+ this.queue.push(value);
+ return true;
+}
+
+
+myCircularQueue.prototype.dequeue = function (){
+if(this.queue.length === 0 ) return false;
+ this.queue.shift();
+ return true;
+}
+
+myCircularQueue.prototype.front = function (){
+ if(this.queue.length === 0 ) return -1;
+ return this.queue[0];
+}
+
+myCircularQueue.prototype.rear = function (){
+ if(this.queue.length === 0 ) return -1;
+ return this.queue[this.queue.length - 1];
+}
+
+myCircularQueue.prototype.isFull = function (){
+if(this.size === this.queue.length) {
+return  false;
+}
+return true
+}
+
+var obj = new myCircularQueue(3);
+var params_1 = obj.enqueue(1);
+var params_1 = obj.enqueue(3);
+var params_1 = obj.enqueue(4);
+console.log(obj.front(), obj.rear());
+```
 
 
 
